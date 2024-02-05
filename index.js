@@ -10,6 +10,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "/routes/auth.js";
 import { register } from "./controllers/auth.js";
+import userRoutes from "./routes/users.js";
 
 
 /* Configurations */
@@ -47,6 +48,7 @@ const upload = multer({ storage });
 /* Routes */
 
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes); 
 
 /* Mongoose setup */
 
